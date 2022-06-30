@@ -40,12 +40,8 @@ end
 
 def caesar_cipher text, shift_factor
     ascii_array = text.chars.map {|character| character.ord}
-    shifted_array =   shift_array_based_on_factor(ascii_array, shift_factor)
+    shifted_array = shift_array_based_on_factor(ascii_array, shift_factor)
     updated_characters_array = shifted_array.map { |shifted_ascii_value| shifted_ascii_value.chr }
     updated_characters_array.join 
 end
 
-puts caesar_cipher('"What a string!', 5)
-puts caesar_cipher('defend the east wall of the castle', 1)
-puts caesar_cipher('abcdefghijklmnopqrstuvwxyz', 1)
-puts caesar_cipher('aA', -1)
